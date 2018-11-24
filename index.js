@@ -67,7 +67,7 @@ client.on('ready',  () => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
 if (message.content.startsWith('b!adminbc')){
-if(!message.author.id === '476185102922285066') return;
+if(!message.author.id === '457655651984867331') return;
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
 m.sendMessage(args)
@@ -116,7 +116,7 @@ m.sendMessage(args)
     if (message.content === "b!invite") {
      const embed = new Discord.RichEmbed()
          .setColor("RANDOM")
-         .addField('Broadcast', `https://discordapp.com/api/oauth2/authorize?client_id=489960386339274771&permissions=8&scope=bot`)
+         .addField('Broadcast', `https://discordapp.com/api/oauth2/authorize?client_id=498141890668003330&permissions=8&scope=bot`)
      message.author.send({embed});
    
     }
@@ -127,7 +127,7 @@ m.sendMessage(args)
     if (message.content === "b!support") {
      const embed = new Discord.RichEmbed()
          .setColor("RANDOM")
-         .addField('❤سيرفر الدعم الفني', `  https://discord.gg/NuQ2zYu  `)
+         .addField('❤سيرفر الدعم الفني', `  https://discord.gg/keqcgzN  `)
      message.author.send({embed});
    
     }
