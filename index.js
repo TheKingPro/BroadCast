@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 
 
-client.login('NTEyNzQ5NTQ4MjU5NzcwMzcw.Ds-CIg.oJouMLa0-O3EiUYz545FVGogWJk');
+client.login('NDk4MTQxODkwNjY4MDAzMzMw.DtwNxQ.EDjq4Dirb3msg9PNeo4xln2-sQs');
 
 
 
@@ -15,13 +15,13 @@ client.login('NTEyNzQ5NTQ4MjU5NzcwMzcw.Ds-CIg.oJouMLa0-O3EiUYz545FVGogWJk');
 
 
 client.on('message', message => {
-    var prefix = "$";
+    var prefix = "_";
     
         if (message.author.id === client.user.id) return;
         if (message.guild) {
        let embed = new Discord.RichEmbed()
         let args = message.content.split(' ').slice(1).join(' ');
-    if(message.content.split(' ')[0] == prefix + 'bc') {
+    if(message.content.split(' ')[0] == prefix + 'bc1') {
         if (!args[1]) {
     message.channel.send("**f!bc <message>**");
     return;
@@ -44,7 +44,7 @@ client.on('message', message => {
 	
 	
 	
-client.login('NTEyNzQ5NTQ4MjU5NzcwMzcw.Ds-CIg.oJouMLa0-O3EiUYz545FVGogWJk');
+client.login('NDk4MTQxODkwNjY4MDAzMzMw.DtwNxQ.EDjq4Dirb3msg9PNeo4xln2-sQs');
 
 
 
@@ -58,16 +58,16 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers `);
     console.log(`---------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setGame(`اصبر فالصبر من الايمان`,"http://twitch.tv/y04zgamer")
+  client.user.setGame(`_help | _inv`,"http://twitch.tv/y04zgamer")
    client.user.setStatus("dnd")
 });
 
-client.login('NTEyNzQ5NTQ4MjU5NzcwMzcw.Ds-CIg.oJouMLa0-O3EiUYz545FVGogWJk');
+client.login('NDk4MTQxODkwNjY4MDAzMzMw.DtwNxQ.EDjq4Dirb3msg9PNeo4xln2-sQs');
 
 
 client.on('message', message => {
     let args = message.content.split(' ').slice(1).join(' ');
-    if (message.content.startsWith('$bc-bot')){ // البريفكس والامر
+    if (message.content.startsWith('_bc-bot')){ // البريفكس والامر
     if(!message.author.id === '') return;
     message.channel.sendMessage('جار ارسال الرسالة :white_check_mark:')
     client.users.forEach(m =>{
@@ -76,4 +76,4 @@ client.on('message', message => {
     }
     });
 
-client.login('NTEyNzQ5NTQ4MjU5NzcwMzcw.Ds-CIg.oJouMLa0-O3EiUYz545FVGogWJk');
+client.login('NDk4MTQxODkwNjY4MDAzMzMw.DtwNxQ.EDjq4Dirb3msg9PNeo4xln2-sQs');
