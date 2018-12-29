@@ -134,3 +134,6 @@ if(!message.member.hasPermission('ADMINISTRATOR')) return;
 }
 });
 
+client.login(process.env.BOT_TOKEN);
+
+
