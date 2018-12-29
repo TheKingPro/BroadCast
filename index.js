@@ -82,6 +82,8 @@ client.login(process.env.BOT_TOKEN);
 
 
 client.on("message", message => {
+    var prefix = "!";
+	
     if (message.content === (prefix + "help")) {
      const embed = new Discord.RichEmbed() 
          .setColor("#580e6b")
