@@ -58,7 +58,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers `);
     console.log(`---------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setGame(`!bc | !bc`,"http://twitch.tv/y04zgamer")
+  client.user.setGame(`Legends Community The Best Server`,"http://twitch.tv/y04zgamer")
    client.user.setStatus("dnd")
 });
 
