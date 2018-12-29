@@ -4,7 +4,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
-
+const prefix = '_'
 
 
 client.login(process.env.BOT_TOKEN);
@@ -21,11 +21,11 @@ client.on('message', message => {
         if (message.guild) {
        let embed = new Discord.RichEmbed()
         let args = message.content.split(' ').slice(1).join(' ');
-    if(message.content.split(' ')[0] == prefix + 'bc') {
+    if(message.content.split(' ')[0] == prefix + 'bc1') {
         if (!args[1]) {
     message.channel.send("**f!bc <message>**");
     return;
-    }c
+    }
             message.guild.members.forEach(m => {
        if(!message.member.hasPermission('ADMINISTRATOR')) return;
                 var bc = new Discord.RichEmbed()
@@ -90,9 +90,9 @@ client.on("message", message => {
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**
          ------------------------------
-         _bc1 : برودكاست لجميع اعضاء السيرفر بايمبد
-         _bc2 : برودكاست لجميع اعضاء السيرفر بدون ايمبد
-         _bc3 : برودكاست للاعضاء  الاونلاين فقط
+         !bc1 : برودكاست لجميع اعضاء السيرفر بايمبد
+         !bc2 : برودكاست لجميع اعضاء السيرفر بدون ايمبد
+         !bc3 : برودكاست للاعضاء  الاونلاين فقط
          ------------------------------
          
        **  `)
@@ -102,4 +102,35 @@ client.on("message", message => {
    });  
 
 client.login(process.env.BOT_TOKEN);
+
+
+
+
+client.on('message', message => {
+if (message.author.id === client.user.id) return;
+if (message.guild) {
+let embed = new Discord.RichEmbed()
+let args = message.content.split(' ').slice(1).join(' ');
+if(message.content.split(' ')[0] == prefix + 'bc2') {
+if(!message.channel.guild) return message.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');         
+if (!args[1]) {
+return;
+}
+  message.guild.members.forEach(m => {
+if(!message.member.hasPermission('ADMINISTRATOR')) return;
+      var bc = new Discord.RichEmbed()
+      .addField('# | الرسالة ', args)
+      .setThumbnail(message.guild.iconURL)
+      .setColor('RANDOM')
+      m.sendMessage(args)
+  });
+         if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply(":x: **ليس لديك صلاحية للنشر هنا**");
+  const AziRo = new Discord.RichEmbed()   
+  .setColor('RANDOM')
+  message.channel.sendEmbed(AziRo);          
+}
+} else {
+  return;
+}
+});
 
