@@ -4,7 +4,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
-const prefix = '_'
+const prefix = '%'
 
 
 client.login(process.env.BOT_TOKEN);
@@ -15,7 +15,7 @@ client.login(process.env.BOT_TOKEN);
 
 
 client.on('message', message => {
-    var prefix = "!";
+    var prefix = "%";
     
         if (message.author.id === client.user.id) return;
         if (message.guild) {
@@ -82,7 +82,7 @@ client.login(process.env.BOT_TOKEN);
 
 
 client.on("message", message => {
-    var prefix = "!";
+    var prefix = "%";
 	
     if (message.content === (prefix + "help")) {
      const embed = new Discord.RichEmbed() 
@@ -90,9 +90,9 @@ client.on("message", message => {
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**
          ------------------------------
-         !bc1 : برودكاست لجميع اعضاء السيرفر بايمبد
-         !bc2 : برودكاست لجميع اعضاء السيرفر بدون ايمبد
-         !bc3 : برودكاست للاعضاء  الاونلاين فقط
+         %bc1 : برودكاست لجميع اعضاء السيرفر بايمبد
+         %bc2 : برودكاست لجميع اعضاء السيرفر بدون ايمبد
+         %bc3 : برودكاست للاعضاء  الاونلاين فقط
          ------------------------------
          
        **  `)
@@ -107,7 +107,7 @@ client.login(process.env.BOT_TOKEN);
 
 
 client.on('message', message => {
-    var prefix = "!";
+    var prefix = "%";
 	
 if (message.author.id === client.user.id) return;
 if (message.guild) {
@@ -141,7 +141,7 @@ client.login(process.env.BOT_TOKEN);
 
 
 client.on("message", message => {
-    var prefix = "!";	
+    var prefix = "%";	
 
             if (message.content.startsWith(prefix + "bc3")) {
                          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
