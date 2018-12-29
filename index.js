@@ -15,7 +15,7 @@ client.login(process.env.BOT_TOKEN);
 
 
 client.on('message', message => {
-    var prefix = "_";
+    var prefix = "!";
     
         if (message.author.id === client.user.id) return;
         if (message.guild) {
@@ -25,7 +25,7 @@ client.on('message', message => {
         if (!args[1]) {
     message.channel.send("**f!bc <message>**");
     return;
-    }
+    }c
             message.guild.members.forEach(m => {
        if(!message.member.hasPermission('ADMINISTRATOR')) return;
                 var bc = new Discord.RichEmbed()
@@ -58,7 +58,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers `);
     console.log(`---------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setGame(`!help | !help`,"http://twitch.tv/y04zgamer")
+  client.user.setGame(`!bc | !bc`,"http://twitch.tv/y04zgamer")
    client.user.setStatus("dnd")
 });
 
@@ -77,3 +77,27 @@ client.on('message', message => {
     });
 
 client.login(process.env.BOT_TOKEN);
+
+
+
+
+client.on("message", message => {
+    if (message.content === (prefix + "help")) {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#580e6b")
+         .setThumbnail(message.author.avatarURL)
+         .setDescription(`**
+         ------------------------------
+         _bc1 : برودكاست لجميع اعضاء السيرفر بايمبد
+         _bc2 : برودكاست لجميع اعضاء السيرفر بدون ايمبد
+         _bc3 : برودكاست للاعضاء  الاونلاين فقط
+         ------------------------------
+         
+       **  `)
+   message.author.sendEmbed(embed)
+   
+   }
+   });  
+
+client.login(process.env.BOT_TOKEN);
+
