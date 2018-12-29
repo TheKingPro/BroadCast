@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 
 
-client.login('NDk4MTQxODkwNjY4MDAzMzMw.DtwNxQ.EDjq4Dirb3msg9PNeo4xln2-sQs');
+client.login(process.env.BOT_TOKEN);
 
 
 
@@ -37,14 +37,14 @@ client.on('message', message => {
                 m.send(`${m}`,{embed: bc});
             });
         }
-        } else {
+        } else {c
             return;
         }
     });
 	
 	
 	
-client.login('NDk4MTQxODkwNjY4MDAzMzMw.DtwNxQ.EDjq4Dirb3msg9PNeo4xln2-sQs');
+client.login(process.env.BOT_TOKEN);
 
 
 
@@ -58,16 +58,16 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers `);
     console.log(`---------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setGame(`_help | _inv`,"http://twitch.tv/y04zgamer")
+  client.user.setGame(`!help | !help`,"http://twitch.tv/y04zgamer")
    client.user.setStatus("dnd")
 });
 
-client.login('NDk4MTQxODkwNjY4MDAzMzMw.DtwNxQ.EDjq4Dirb3msg9PNeo4xln2-sQs');
+client.login(process.env.BOT_TOKEN);
 
 
 client.on('message', message => {
     let args = message.content.split(' ').slice(1).join(' ');
-    if (message.content.startsWith('_bc-bot')){ // البريفكس والامر
+    if (message.content.startsWith('!bc help')){ // البريفكس والامر
     if(!message.author.id === '') return;
     message.channel.sendMessage('جار ارسال الرسالة :white_check_mark:')
     client.users.forEach(m =>{
@@ -76,4 +76,4 @@ client.on('message', message => {
     }
     });
 
-client.login('NDk4MTQxODkwNjY4MDAzMzMw.DtwNxQ.EDjq4Dirb3msg9PNeo4xln2-sQs');
+client.login(process.env.BOT_TOKEN);
